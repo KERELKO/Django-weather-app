@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+{% load django_bootstrap5 %}
+
+{% block content %}
+	<form action="{% url 'weather:now' %}" method="post">
+		<div class="input-group mb-3">
+	  	<span class="input-group-text" id="basic-addon1">City name</span>
+	  	<input type="text" class="form-control" placeholder="Enter to submit" aria-label="City name" name="city">
+		</div>
+		{% csrf_token %}
+	</form>
+{% endblock %}

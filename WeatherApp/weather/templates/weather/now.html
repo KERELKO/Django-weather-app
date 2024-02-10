@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+
+{% block content %}
+	<h3>Current weather in {{ city }}</h3>
+	<ul class="list-group">
+	  <li class="list-group-item">Temperature: {{ temp }}°</li>
+	  <li class="list-group-item">Temperature min: {{ temp_min }}°</li>
+	  <li class="list-group-item">Temperature max: {{ temp_max }}°</li>
+	  <li class="list-group-item">Wind speed: {{ wind_speed }}m/s</li>
+	  <li class="list-group-item">Visibility: {{ visibility }}m</li>
+	  <li class="list-group-item">Sunset: {{ sunset }}</li>
+	  <li class="list-group-item">Sunrise: {{ sunrise }}</li>
+	  <li class="list-group-item">Clouds: {{ clouds }}%</li>
+	</ul>
+{% endblock %}
