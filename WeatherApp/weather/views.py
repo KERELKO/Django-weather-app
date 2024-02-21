@@ -21,8 +21,10 @@ class WeatherNowView(View, TemplateResponseMixin):
 	
 	def post(self, request):
 		city = request.POST['city']
-		url = settings.WEATHER_API_URL.format(city, 
-											  settings.OPEN_WEATHER_API_KEY)
+		url = settings.WEATHER_API_URL.format(
+			city, 
+			settings.OPEN_WEATHER_API_KEY
+		)
 		data = get_json(url)
 		if data:
 			context = get_weather_info(data)
