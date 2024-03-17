@@ -114,5 +114,5 @@ STATIC_URL = 'static/'
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
-OPEN_WEATHER_API_KEY = 'f40aceb1ceb76a73cd6560faac136d47'
+OPEN_WEATHER_API_KEY = ''
 WEATHER_API_URL = 'https://api.openweathermap.org/data/2.5/weather?q={0}&appid={1}&units=metric'
