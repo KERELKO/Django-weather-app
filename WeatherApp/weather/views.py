@@ -3,10 +3,11 @@ from django.contrib import messages
 from django.views.generic import View
 from django.views.generic.base import TemplateResponseMixin
 from django.conf import settings
+
 from .utils import get_weather_info, get_json
 
 
-class WeatherNowView(View, TemplateResponseMixin):
+class WeatherNowView(TemplateResponseMixin, View):
 
 	def dispatch(self, request, *args, **kwargs):
 		if request.method == 'GET':
@@ -20,7 +21,7 @@ class WeatherNowView(View, TemplateResponseMixin):
 		return self.render_to_response(context)	
 	
 	def post(self, request):
-		city = request.POST['city']
+		city = request.POST.get('city')
 		url = settings.WEATHER_API_URL.format(
 			city, 
 			settings.OPEN_WEATHER_API_KEY
