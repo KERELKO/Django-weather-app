@@ -40,7 +40,7 @@ INSTALLED_APPS = [
     
     'django_bootstrap5',
     
-    'weather.apps.WeatherConfig',
+    'WeatherApp.weather.apps.WeatherConfig',
 ]
 
 MIDDLEWARE = [
@@ -53,7 +53,7 @@ MIDDLEWARE = [
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
 
-ROOT_URLCONF = 'WeatherApp.urls'
+ROOT_URLCONF = 'WeatherApp.WeatherApp.urls'
 
 TEMPLATES = [
     {
@@ -71,7 +71,7 @@ TEMPLATES = [
     },
 ]
 
-WSGI_APPLICATION = 'WeatherApp.wsgi.application'
+WSGI_APPLICATION = 'WeatherApp.WeatherApp.wsgi.application'
 
 # Password validation
 # https://docs.djangoproject.com/en/5.0/ref/settings/#auth-password-validators
